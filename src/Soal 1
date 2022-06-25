@@ -1,0 +1,55 @@
+1. Buat terlebih dahulu method node insert dan inorder terlebih dahulu.
+ seperti berikut :
+ private static Node insert(Node node, int key){
+         if (node == null){
+             Node temp = new Node(key);
+             return temp;
+         }
+         if (key < node.key){
+             node.left = insert(node.left, key);
+         }else if(key > node.key){
+             node.right = insert(node.right, key);
+         }
+         return node;
+     }
+
+     private static void inorder(Node root){
+         if (root != null){
+             inorder(root.left);
+             System.out.println(" " + root.key);
+             inorder(root.right);
+         }
+     }
+     # method tersebut akan mengatur level dari data yang masuk dan mengeprintnya.
+
+2. Panggil main function
+3. masukan data mobil dari awal dengan parameter (root, plat nomor)
+4. binary tree akan menjadikan HRV sebagai root awal.
+5. untuk data akan diurutkan melalui huruf awal plat nomor.
+
+HRV     = B 5376 BY
+AVANZA  = G 5647 GE
+INOVA   = H 6384 HK
+SIGRA   = AD 6536 ZA
+PANTHER = T 6538 AR
+AYLA    = D 7362 SS
+CRV     = R 8824 DK
+
+6. jika digambarkan akan menjadi seperti ini
+
+                                       B 5376 BY
+                                      /         \
+                                 AD 6536 ZA     G 5647 GE
+                                              /  \
+                                             -   H 6384 HK
+                                                 /   \
+                                                 -    T 6538 AR
+                                                       /     \
+                                                  D 7362 SS   -
+                                                      /  \
+                                                     -    R 8824 DK
+
+# JIKA DIURUTKAN DENGAN MENGGUNAKAN NOMOR
+7. JADI SIGRA AKAN BERADA PADA KAKI KIRI LEVEL PERTAMA.
+
+#cc_Riky raharjo

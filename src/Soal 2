@@ -1,0 +1,122 @@
+a[] = 2 18 1 0 56 76 98 34 12
+n = 9
+
+Quick :
+
+start = 0
+end = 9-1 = 8
+int p = partition (a,0,8)
+
+partition :
+
+pivot = a[8] = 12
+i = 0-1 = -1
+for(j=0;j<8)
+
+PARTITION 1
+1. J=0
+    if(2< 12) YA
+    MAKA TETAP
+
+2. J=1
+   if(18 < 12) Tidak
+   LANJUT DULU
+
+3. J=2
+    if(1 < 12) YA
+    MAKA DIPUTAR ANTARA 18 DGN 1 MENJADI = 2 1 18 0 56 76 98 34 12
+
+4. J=3
+    if(0 < 12) YA
+    MAKA DIPUTAR ANTARA 0 DGN 18 MENJADI = 2 1 0 18 56 76 98 34 12
+
+5. J=4
+    if(56 < 12 ) TIDAK
+    LANJUT DULU
+
+6. J=5
+    if(76 < 12) TIDAK
+    LANJUT
+
+7. J=6
+    if(98 < 12) TIDAK
+    LANJUT
+
+8. J=7
+    if(34 < 12) TIDAK
+    LANJUT
+
+9. J=8
+    if(12 < 12) TIDAK
+    LANJUT
+
+   HASIL = a[] = 2 1 0 18 56 76 98 34 12
+
+
+P5 (FROM RETURN)
+QUICKSORT(a,start,P-1);
+QUICKSORT(a,start,5-1);
+Pivot = [4] = 56
+
+1. J=0
+    if(2 < 56) YA
+    lanjut
+
+2. J=1
+    if(1 < 56) YA
+    lanjut
+
+3. J=2
+    if(0 < 56) YA
+    lanjut
+
+4. J=3
+    if(18 < 56) YA
+    lanjut
+
+5. J=4
+    if(56 < 56) TIDAK
+    lanjut
+
+6. J=5
+    if(76 < 56) TIDAK
+    lanjut
+
+7. J=6
+    if(98 < 56) TIDAK
+    lanjut
+
+8. J=7
+    if( 34 < 56) YA
+    2 1 0 18 34 56 76 98 12
+    lanjut
+
+9. J=8
+    if(12 < 56) YA
+    2 1 0 18 34 12 56 76 98
+
+
+    HASIL DARI P5 = 2 1 0 18 34 12 56 76 98
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
